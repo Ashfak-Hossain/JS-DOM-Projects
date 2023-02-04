@@ -84,7 +84,7 @@ h1 {
 }
 
 .toast-message-slide-out {
-  animation: toast-animation-out 0.5s ease-in;
+  animation: toast-animation-out 0.5s ease-out;
 }
 
 @keyframes toast-animation-in {
@@ -105,5 +105,6 @@ h1 {
   }
   to {
     transform: translateX(200px);
+    opacity: 0;
   }
 }
