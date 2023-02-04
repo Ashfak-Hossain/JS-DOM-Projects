@@ -46,4 +46,5 @@ button:hover {
 h1 {
   text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
     1px 1px 0 #fff;
+  margin-bottom: 20px;
 }
