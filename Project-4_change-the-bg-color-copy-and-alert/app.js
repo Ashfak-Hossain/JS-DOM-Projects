@@ -25,6 +25,8 @@ function main() {
 
   copyBtn.addEventListener("click", function () {
     navigator.clipboard.writeText(output.value);
+
+    generateToastMessage(`${output.value} copied!`);
   });
 }
 
@@ -34,4 +36,12 @@ function generateHEXColor() {
   const blue = Math.floor(Math.random() * 255);
 
   return `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`;
+}
+
+function generateToastMessage(msg) {
+  const div = document.createElement("div");
+  div.innerText = msg;
+  div.className = "toast-message";
+
+  document.body.appendChild(div);
 }

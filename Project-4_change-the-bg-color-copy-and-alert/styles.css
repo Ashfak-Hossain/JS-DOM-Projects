@@ -32,6 +32,10 @@ input[type="text"]:disabled,
   border-radius: 0.25rem;
 }
 
+.copy-btn {
+  cursor: pointer;
+}
+
 .change-btn {
   padding: 1rem 3rem;
   margin: 1rem 0;
@@ -57,4 +61,49 @@ h1 {
     1px 1px 0 #fff;
   margin-bottom: 20px;
   text-align: center;
+  letter-spacing: 1px;
+}
+
+.toast-message {
+  position: fixed;
+  z-index: 999;
+  top: 2rem;
+  right: 2rem;
+  background-color: rgb(19, 201, 110);
+  color: #000;
+  border: 1px solid #fff;
+  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.toast-message-slide-in {
+  animation: toast-animation-in 0.5s ease-in;
+}
+
+.toast-message-slide-out {
+  animation: toast-animation-out 0.5s ease-in;
+}
+
+@keyframes toast-animation-in {
+  form {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-animation-out {
+  form {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(200px);
+  }
 }
