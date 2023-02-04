@@ -10,14 +10,21 @@ window.onload = () => {
 
 function main() {
   const root = document.getElementById("root");
-  const btn = document.getElementById("change-btn");
+  const changeBtn = document.getElementById("change-btn");
+
   const output = document.getElementById("output");
 
-  btn.addEventListener("click", function () {
+  const copyBtn = document.getElementById("copy-btn");
+
+  changeBtn.addEventListener("click", function () {
     const bgColor = generateHEXColor();
     root.style.backgroundColor = bgColor;
 
     output.value = bgColor;
+  });
+
+  copyBtn.addEventListener("click", function () {
+    navigator.clipboard.writeText(output.value);
   });
 }
 
@@ -28,4 +35,3 @@ function generateHEXColor() {
 
   return `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`;
 }
-
