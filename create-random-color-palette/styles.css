@@ -51,6 +51,7 @@ body {
   margin: 12px 0 8px;
   font-size: 1.15rem;
   font-weight: 500;
+  text-transform: uppercase;
 }
 .refresh-btn {
   position: fixed;
@@ -66,4 +67,24 @@ body {
   background: #8a6cff;
   border: 2px solid #fff;
   box-shadow: 0 15px 25px rgba(52, 87, 220, 0.2);
+}
+
+@media screen and (max-width: 510px) {
+  .container {
+    margin: 10px;
+  }
+
+  .container .color {
+    margin: 8px;
+    padding: 5px;
+  }
+
+  .color .rect-box {
+    width: 145px;
+    height: 148px;
+  }
+
+  .color .hex-value {
+    font-size: 1.05rem;
+  }
 }
