@@ -23,7 +23,7 @@ body {
   align-items: center;
 }
 
-input[type="text"]:disabled,
+input[type="text"],
 .copy-btn {
   background-color: #fff;
   color: #999;
